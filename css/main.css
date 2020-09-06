@@ -88,7 +88,11 @@ textarea {
    ========================================================================== */
 
 
-/* ------- Base Styles & Rules (Mobile) ------- */
+/* ------- General Styles & Rules (Mobile) ------- */
+
+html {
+  font-size: 16px;
+}
 
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
@@ -204,12 +208,38 @@ footer address {
   text-align: center;
 }
 
-footer p {
+footer .contact p {
   padding-top: 18px;
 }
 
 footer .social {
   padding-top: 40px;
+  text-align: center;
+}
+
+footer .social .social-icons {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+footer .social .social-icons p {
+  background: #527158;
+  height: 40px;
+  width: 40px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 20px 0 20px;
+}
+
+footer .social .social-icons i {
+  color: #e2e3ed;
+  font-size: 1.5em;
+  
+  
 }
 
 footer .copyright {
@@ -219,6 +249,7 @@ footer .copyright {
 /* ------- Mobile Styles - Homepage ------- */
 
 aside,
+aside .content-wrapper,
 .features,
 .reviews {
   display: flex;
@@ -249,7 +280,7 @@ aside {
   padding: 30px 0 55px 0;
 }
 
-aside div {
+aside .content-wrapper {
   width: 90%;
 }
 
@@ -259,12 +290,14 @@ aside p {
 
 aside .form {
   margin-top: 35px;
+  width: 100%;
 }
 
 aside input {
   margin: 20px 0 0 0;
   width: 100%;
   height: 50px;
+  border: none;
 }
 
 .features {
@@ -277,6 +310,14 @@ aside input {
 
 .features .content-wrapper {
   width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.features h1 {
+  margin-bottom: 55px;
 }
 
 .features-items {
@@ -285,11 +326,21 @@ aside input {
   align-items: center;
   flex-flow: row wrap;
   text-align: center;
+  width: 90%;
 }
 
-.features-items p {
+.features .fontawesome-icon {
+  width: 100%;
+}
+
+.features i {
+  font-size: 4.2em;
+  width: 100%;
+}
+
+.features-item-description {
   color: #e1e2ea;
-  width: 90%;
+  width: 70%;
   margin: 40px 0 50px 0;
 }
 
@@ -343,6 +394,28 @@ aside input {
   flex-flow: row wrap;
 }
 
+.mission {
+  background: #527158;
+  padding: 45px 0 35px 0;
+}
+
+.mission .content-wrapper {
+  width: 90%;
+}
+
+.contact-section {
+  background: #2a423a;
+  padding: 45px 0 35px 0;
+}
+
+.contact-section .content-wrapper {
+  width: 90%;
+}
+
+.contact-section address {
+  font-style: normal;
+  padding-top: 10px;
+}
 
 /* ------- Mobile Styles - FAQ ------- */
 
@@ -351,15 +424,26 @@ aside input {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background:#527158;
+  padding: 50px 0 40px 0;
 }
 
-.faq .contact-wrapper {
+.faq .content-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  width: 90%;
 }
 
+.faq h1 {
+  width: 100%;
+  line-height: 1em;
+}
+
+.faq-item {
+  margin-top: 40px;
+}
 
 
 /* ==========================================================================
@@ -450,16 +534,172 @@ aside input {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {  
+  /* Tablet styles here */
+
+  h1 {
+    font-size: 2.25em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+  
+  header .content-wrapper {
+    width: 83.3%;
+    justify-content: space-between;
+    padding-bottom: 15px;
+  }
+
+  header .logo {
+    padding-top: 15px;
+
+  }
+
+  header nav {
+    text-align: right;
+    justify-content: flex-end;
+  }
+
+  header nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav ul li {
+    padding: 0 0 0 3em;
+    font-size: 1em;
+    
+  }
+
+  .header-divider {
+    display: none;
+  }
+
+  .hero-area {
+    height: 600px;
+  }
+
+  .hero-area h2 {
+    font-size: 3em;
+    margin-top: 90px;
+    width: 83.3%;
+  }
+
+
+  aside {
+    padding: 45px 0;
+  }
+
+  aside .content-wrapper {
+    width: 83.3%;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  aside .form-description,
+  aside .form {
+    width: 45%;
+  }
+
+  aside .form-description h1,
+  aside .form-description p {
+    width: 80%;
+  }
+
+  aside .form {
+    margin-top: 0;
+  }
+
+  aside input {
+    height: 40px;
+  }
+
+  .features {
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+
+  .features .content-wrapper {
+    width: 83.3%;
+    justify-content: space-between;
+  }
+
+  .features h1 {
+    margin-bottom: 20px;
+  }
+
+  .features article {
+    flex-basis: 235px;
+    flex-grow: 1;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .features i {
+    font-size: 5em;
+  }
+
+  .features-item-description {
+    color: #e1e2ea;
+    width:  85%;
+    margin: 15px 0 45px 0;
+  }
+
+  .reviews .content-wrapper {
+    width: 83.3%;
+  }
+
+  .reviews {
+    padding: 65px 0 95px 0;
+  }
+  
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: nowrap;
+  }
+
+  .reviews article .img-container,
+  .reviews article div {
+    width: 49%;
+  }
+
+  .reviews h3 {
+    padding: 20px 0 10px 0;
+  }
+
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .contact,
+  footer .social {
+    width: 50%;
+    padding: 40px 0 40px 0;
+  }
+
+  footer .social .social-icons p {
+    margin-top: 30px;
+  }
+
+  footer .contact p {
+    padding-top: 30px;
+  }
+
+  footer .copyright {
+    text-align: center;
+    width: 100%;
+  }
+
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+@media only screen and (min-width: 1200px) {
+  /* Desktop styles here */
 }
+
 
 /* ==========================================================================
    Print styles.
