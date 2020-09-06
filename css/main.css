@@ -249,7 +249,6 @@ footer .copyright {
 /* ------- Mobile Styles - Homepage ------- */
 
 aside,
-aside .content-wrapper,
 .features,
 .reviews {
   display: flex;
@@ -282,6 +281,10 @@ aside {
 
 aside .content-wrapper {
   width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row wrap; 
 }
 
 aside p {
@@ -535,7 +538,7 @@ aside input {
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {  
-  /* ---- TABLET STYLES ---- */
+  /* ~~~~~~~~~ TABLET STYLES ~~~~~~~~~ */
 
   h1 {
     font-size: 2.25em;
@@ -545,7 +548,7 @@ aside input {
     font-size: 1.5em;
   }
   
-  /* Tablet Header & Footer */
+  /* --- Tablet Header & Footer --- */
 
   header .content-wrapper {
     width: 83%;
@@ -586,7 +589,7 @@ aside input {
   footer .contact,
   footer .social {
     width: 50%;
-    padding: 40px 0 40px 0;
+    padding: 40px 0;
   }
 
   footer .social .social-icons p {
@@ -603,7 +606,7 @@ aside input {
   }
 
 
-  /* Tablet Homepage */
+  /* --- Tablet Homepage --- */
 
   .hero-area {
     height: 600px;
@@ -653,6 +656,7 @@ aside input {
   .features .content-wrapper {
     width: 83%;
     justify-content: space-between;
+    align-items: flex-start;
   }
 
   .features h1 {
@@ -660,7 +664,7 @@ aside input {
   }
 
   .features article {
-    flex-basis: 235px;
+    flex-basis: 35%;
     flex-grow: 1;
     padding-left: 40px;
     padding-right: 40px;
@@ -671,7 +675,6 @@ aside input {
   }
 
   .features-item-description {
-    color: #e1e2ea;
     width:  85%;
     margin: 15px 0 45px 0;
   }
@@ -699,7 +702,8 @@ aside input {
     padding: 20px 0 10px 0;
   }
 
-  /* Tablet About page */
+
+  /* --- Tablet About page --- */
 
   .mission {
     padding: 80px 0 70px 0;
@@ -769,7 +773,132 @@ aside input {
 }
 
 @media only screen and (min-width: 1200px) {
-  /* Desktop styles here */
+  /* ~~~~~~~~~ DESKTOP STYLES ~~~~~~~~~ */
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h3 {
+    font-size: 1.875em;
+  }
+  
+  p {
+    font-size: 1.125em;
+  }
+
+  /* --- Desktop Header & Footer --- */
+
+  header .content-wrapper {
+    width: 80%;
+  }
+
+  header .logo {
+    width: 17.75em;
+  }
+  
+  header nav ul li {
+    font-size: 1.125em;
+  }
+
+  footer .content-wrapper {
+    width: 80%;
+  }
+
+  footer .contact,
+  footer .social {
+    width: 25%;
+    padding: 40px 30px;
+  }
+
+
+  /* --- Desktop Homepage --- */
+ 
+  .hero-area h2 {
+    font-size: 3.75em;
+    margin-top: 45px;
+    width: 80%;
+  }
+
+  aside .content-wrapper {
+    width: 66%;
+  }
+
+  aside .form-description,
+  aside .form {
+    width: 43%;
+  }
+
+  .features .content-wrapper {
+    width: 80%;
+  }
+
+  .features h1 {
+    font-size: 2.25em;
+    margin-bottom: 75px;
+  }
+
+  .features article {
+    flex-basis: 25%;
+    flex-grow: 1;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .features i {
+    font-size: 4em;
+  }
+
+  .features-item-description {
+    margin: 10px 0 35px 0;
+  }
+
+  .reviews {
+    padding: 95px 0 95px 0;
+  }
+
+  .reviews .content-wrapper {
+    width: 80%;
+  }
+
+  .reviews h1 {
+    padding-bottom: 60px;
+    font-size: 2.25em;
+  }
+
+  .reviews article .img-container,
+  .reviews article div {
+    width: 48%;
+  }
+
+  .reviews article .img-container {
+    height: 300px;
+  }
+
+
+  /* --- Desktop About page --- */
+
+  .mission .content-wrapper,
+  .contact-section .content-wrapper {
+    width: 80%
+  }
+
+  /* --- Desktop About page --- */
+
+  .faq .content-wrapper {
+    width: 80%
+  }
+
+  .faq h3 {
+    font-size: 1.125em;
+  }
+
+  .faq p {
+    margin-bottom: 0;
+  }
+
+
+
 }
 
 
