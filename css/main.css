@@ -94,6 +94,10 @@ html {
   font-size: 16px;
 }
 
+body {   /* --- BACKGROUND COLOR JUST FOR BUILDING - REMOVE! --- */
+  background: #202322;
+}
+
 h1, h2, h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
@@ -114,10 +118,6 @@ p {
 
 
 /* ------- Base Header - Footer Styles ------- */
-
-body {   /* --- BACKGROUND COLOR JUST FOR BUILDING - REMOVE! --- */
-  background-color: slategrey;
-}
 
 header, footer {
   display: flex;
@@ -535,7 +535,7 @@ aside input {
    ========================================================================== */
 
 @media only screen and (min-width: 768px) {  
-  /* Tablet styles here */
+  /* ---- TABLET STYLES ---- */
 
   h1 {
     font-size: 2.25em;
@@ -545,8 +545,10 @@ aside input {
     font-size: 1.5em;
   }
   
+  /* Tablet Header & Footer */
+
   header .content-wrapper {
-    width: 83.3%;
+    width: 83%;
     justify-content: space-between;
     padding-bottom: 15px;
   }
@@ -576,6 +578,33 @@ aside input {
     display: none;
   }
 
+  footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer .contact,
+  footer .social {
+    width: 50%;
+    padding: 40px 0 40px 0;
+  }
+
+  footer .social .social-icons p {
+    margin-top: 30px;
+  }
+
+  footer .contact p {
+    padding-top: 30px;
+  }
+
+  footer .copyright {
+    text-align: center;
+    width: 100%;
+  }
+
+
+  /* Tablet Homepage */
+
   .hero-area {
     height: 600px;
   }
@@ -583,7 +612,7 @@ aside input {
   .hero-area h2 {
     font-size: 3em;
     margin-top: 90px;
-    width: 83.3%;
+    width: 83%;
   }
 
 
@@ -592,7 +621,7 @@ aside input {
   }
 
   aside .content-wrapper {
-    width: 83.3%;
+    width: 83%;
     flex-flow: nowrap;
     justify-content: space-between;
     align-items: flex-start;
@@ -622,7 +651,7 @@ aside input {
   }
 
   .features .content-wrapper {
-    width: 83.3%;
+    width: 83%;
     justify-content: space-between;
   }
 
@@ -648,7 +677,7 @@ aside input {
   }
 
   .reviews .content-wrapper {
-    width: 83.3%;
+    width: 83%;
   }
 
   .reviews {
@@ -670,29 +699,72 @@ aside input {
     padding: 20px 0 10px 0;
   }
 
-  footer .footer-content {
+  /* Tablet About page */
+
+  .mission {
+    padding: 80px 0 70px 0;
+  }
+  
+  .mission .content-wrapper {
+    width: 83%;
+  }
+
+  .mission-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
   }
 
-  footer .contact,
-  footer .social {
-    width: 50%;
-    padding: 40px 0 40px 0;
-  }
-
-  footer .social .social-icons p {
-    margin-top: 30px;
-  }
-
-  footer .contact p {
-    padding-top: 30px;
-  }
-
-  footer .copyright {
-    text-align: center;
+  .contact-section .content-wrapper h3 {
     width: 100%;
+}
+  .mission-content p {
+      width: 47%;
+      padding-top: 15px;
   }
+
+  .contact-section {
+    padding: 80px 0 70px 0;
+  }
+
+  .contact-section .content-wrapper {
+    width: 83%;
+  }
+
+  .contact-section .content-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-flow: row wrap;
+  }
+  
+  .contact-section address {
+    width: 50%;
+    padding-top: 40px;
+  }
+
+  /* Tablet FAQ page */
+
+  .faq {
+    padding: 80px 0 70px 0;
+  }
+
+  .faq .content-wrapper {
+    width: 83%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .faq .faq-item {
+    flex-basis: 45%;
+  }
+
+  .faq h3 {
+    width: 100%;
+    font-size: 1em;
+  }
+
 
 }
 
